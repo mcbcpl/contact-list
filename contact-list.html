@@ -1,0 +1,39 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<link rel="import" href="../contact-card/contact-card.html">
+
+<dom-module id="contact-list">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h5>hello [[prop1]]!</h5>
+    <slot></slot>
+  </template>
+
+  <script>
+    /**
+     * `contact-list`
+     * Gerencia a lista de contatos na WEB
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class ContactList extends Polymer.Element {
+      static get is() { return 'contact-list'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'contact-list'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(ContactList.is, ContactList);
+  </script>
+</dom-module>
